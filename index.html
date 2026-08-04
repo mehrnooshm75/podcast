@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Women in Science Podcast</title>
+    <title>پادکست زنان در علم | Women in Science Podcast</title>
     <style>
         * {
             box-sizing: border-box;
@@ -24,15 +24,15 @@
             color: #ffffff;
         }
 
-        /* پس‌زمینه رنگی و مات (Glow background) */
+        /* هاله نورانی بنفش و صورتی در پس‌زمینه */
         body::before {
             content: "";
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 320px;
+            height: 320px;
             background: linear-gradient(135deg, #a855f7, #ec4899);
             border-radius: 50%;
-            filter: blur(90px);
+            filter: blur(100px);
             opacity: 0.35;
             top: 10%;
             left: 50%;
@@ -51,39 +51,53 @@
             align-items: center;
         }
 
-        /* عکس پروفایل با هاله نئونی بنفش/صورتی */
+        /* استایل عکس پروفایل */
         .avatar-wrapper {
             position: relative;
             margin-bottom: 16px;
         }
 
         .avatar {
-            width: 96px;
-            height: 96px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
             border: 2px solid rgba(255, 255, 255, 0.8);
             box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
         }
 
-        /* عنوان پادکست */
+        /* عنوان و بیو */
         h1 {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             font-weight: 700;
-            letter-spacing: -0.5px;
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             color: #ffffff;
         }
 
-        /* کانتینر دکمه‌ها */
+        .handle {
+            font-size: 0.85rem;
+            color: #a855f7;
+            margin-bottom: 16px;
+            direction: ltr;
+        }
+
+        p.bio {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #d1d5db;
+            margin-bottom: 28px;
+            padding: 0 10px;
+        }
+
+        /* کانتینر لینک‌ها */
         .links-wrapper {
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
         }
 
-        /* استایل دکمه‌ها به سبک شیشه‌ای (Glassmorphism) */
+        /* دکمه‌های شیشه‌ای */
         .link-card {
             display: flex;
             align-items: center;
@@ -103,7 +117,12 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* انیمیشن هوور (موس روی دکمه) */
+        /* دکمه ویژه حامی‌باش */
+        .link-card.sponsor {
+            background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(168, 85, 247, 0.2));
+            border-color: rgba(236, 72, 153, 0.4);
+        }
+
         .link-card:hover {
             background: rgba(255, 255, 255, 0.18);
             transform: translateY(-2px);
@@ -111,9 +130,15 @@
             box-shadow: 0 6px 20px rgba(168, 85, 247, 0.3);
         }
 
+        .link-card.sponsor:hover {
+            background: linear-gradient(135deg, #ec4899, #a855f7);
+            border-color: transparent;
+            box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
+        }
+
         .footer {
-            margin-top: 40px;
-            opacity: 0.4;
+            margin-top: 36px;
+            opacity: 0.5;
             font-size: 0.75rem;
         }
     </style>
@@ -121,25 +146,34 @@
 <body>
 
     <div class="container">
-        <!-- تصویر لوگو / پروفایل پادکست -->
+        <!-- تصویر لوگو (نام فایل را متناسب با فایلی که آپلود می‌کنی بگذار) -->
         <div class="avatar-wrapper">
-            <img class="avatar" src="YOUR_IMAGE_URL_HERE" alt="Women in Science Podcast">
+            <img class="avatar" src="./logo.jpg" alt="پادکست زنان در علم">
         </div>
 
-        <!-- اسم پادکست -->
-        <h1>women_in_science_podcast</h1>
+        <h1>پادکست زنان در علم</h1>
+        <div class="handle">@women_in_science_podcast</div>
 
-        <!-- لیست دکمه‌ها -->
+        <!-- توضیحات و بیو -->
+        <p class="bio">
+            جایی برای شنیدن داستان زندگی، چالش‌ها و دستاوردهای زنان دانشمند در طول تاریخ.<br>
+            اگر به علم، تاریخ و روایت‌های الهام‌بخش علاقه‌مندید، این پادکست برای شماست!
+        </p>
+
+        <!-- لینک‌ها -->
         <div class="links-wrapper">
-            <a href="YOUR_CASTBOX_LINK" target="_blank" class="link-card">Castbox</a>
-            <a href="YOUR_SPOTIFY_LINK" target="_blank" class="link-card">Spotify</a>
-            <a href="YOUR_APPLE_PODCASTS_LINK" target="_blank" class="link-card">Apple Podcasts</a>
-            <a href="YOUR_INSTAGRAM_LINK" target="_blank" class="link-card">Instagram</a>
-            <a href="YOUR_TELEGRAM_LINK" target="_blank" class="link-card">Telegram</a>
+            <a href="https://castbox.fm/vc/6681421" target="_blank" class="link-card">🎙 شنیدن در کست‌باکس (Castbox)</a>
+            <a href="https://open.spotify.com/show/4uQtDJonsC1UlvLufd5UJZ" target="_blank" class="link-card">🎧 شنیدن در اسپاتیفای (Spotify)</a>
+            <a href="https://podcasts.apple.com/us/podcast/%D8%B2%D9%86%D8%A7%D9%86-%D8%AF%D8%B1-%D8%B9%D9%84%D9%85/id1790139575" target="_blank" class="link-card">🍎 شنیدن در اپل پادکستس</a>
+            <a href="https://t.me/wispodcast" target="_blank" class="link-card">✈️ کانال تلگرام</a>
+            <a href="https://www.instagram.com/women_in_science_podcast" target="_blank" class="link-card">📷 صفحه اینستاگرام</a>
+            
+            <!-- لینک حامی باش (لینک واقعی خودت را جایگزین کن) -->
+            <a href="https://hamibash.com/YOUR_USERNAME" target="_blank" class="link-card sponsor">❤️ حمایت مالی از پادکست (حامی‌باش)</a>
         </div>
 
         <div class="footer">
-            Women in Science
+            Women in Science Podcast
         </div>
     </div>
 
