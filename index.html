@@ -26,6 +26,8 @@
     --text: #f4f1e8;
     --muted: #93a1b8;
     --eyebrow: #7e8ba3;
+    --amber: #f5b632;
+    --amber-bright: #ffd166;
   }
 
   *{ box-sizing: border-box; margin:0; padding:0; }
@@ -48,7 +50,6 @@
     overflow-x: hidden;
   }
 
-  /* faint scattered stars, fixed positions so it stays crisp */
   body::before{
     content:"";
     position: fixed;
@@ -76,7 +77,6 @@
     align-items: center;
   }
 
-  /* ---- avatar with orbit ring, the signature element ---- */
   .avatar-wrapper{
     position: relative;
     width: 148px;
@@ -162,7 +162,6 @@
     max-width: 380px;
   }
 
-  /* ---- grouped link sections ---- */
   .group{
     width: 100%;
     margin-bottom: 26px;
@@ -254,6 +253,63 @@
     to{ opacity: 1; transform: translateY(0); }
   }
 
+  /* ---- ad section for Ismcast, sibling show by the same host ---- */
+  .ad-group{
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px dashed rgba(245,182,50,0.25);
+  }
+
+  .ad-tag{
+    display:inline-block;
+    font-size: 0.66rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #16110a;
+    background: var(--amber-bright);
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+  }
+
+  .link-card.ad{
+    background: linear-gradient(135deg, rgba(245,182,50,0.18), rgba(245,182,50,0.05));
+    border-color: rgba(245,182,50,0.55);
+  }
+
+  .link-card.ad .icon{
+    color: var(--amber-bright);
+  }
+
+  .link-card.ad:hover, .link-card.ad:focus-visible{
+    background: linear-gradient(135deg, var(--amber), var(--amber-bright));
+    color: #16110a;
+    border-color: transparent;
+  }
+
+  .link-card.ad:hover .icon, .link-card.ad:focus-visible .icon{
+    color: #16110a;
+  }
+
+  .link-card .label-main{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+    gap: 2px;
+  }
+
+  .link-card .label-sub{
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--muted);
+  }
+
+  .link-card.ad:hover .label-sub, .link-card.ad:focus-visible .label-sub{
+    color: rgba(22,17,10,0.7);
+  }
+
   .footer{
     margin-top: 40px;
     color: var(--eyebrow);
@@ -300,9 +356,9 @@
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z"/><path d="M19 11a7 7 0 0 1-14 0"/><path d="M12 18v3"/></svg>
           شنیدن در اپل پادکست
         </a>
-        <a href="https://mehrnooshm75.github.io/ismcast/" target="_blank" rel="noopener" class="link-card" style="animation-delay:0.2s">
+        <a href="https://fidibo.com/channel/30000510-ismcast-%D8%A7%DB%8C%D8%B3%D9%85-%DA%A9%D8%B3%D8%AA" target="_blank" rel="noopener" class="link-card" style="animation-delay:0.2s">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z"/><path d="M19 11a7 7 0 0 1-14 0"/><path d="M12 18v3"/></svg>
-          شنیدن در ایسم‌کست
+          شنیدن در فیدیبو (بدون فیلترشکن)
         </a>
       </div>
     </div>
@@ -327,6 +383,20 @@
         <a href="https://hamibash.com/wisp" target="_blank" rel="noopener" class="link-card support" style="animation-delay:0.35s">
           <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.6-10-9C.3 8.2 1.9 4 6 4c2.2 0 3.7 1.3 4.5 2.3.8 1 .7 1 1.5 0C12.8 5.3 14.3 4 16.5 4c4.1 0 5.7 4.2 4 8-2.5 4.4-8.5 9-8.5 9Z"/></svg>
           حمایت مالی (حامی‌باش)
+        </a>
+      </div>
+    </div>
+
+    <!-- تبلیغ: ایسم‌کست، پادکست دیگه‌ای از همین میزبان -->
+    <div class="ad-group">
+      <span class="ad-tag">تبلیغ</span>
+      <div class="links-wrapper">
+        <a href="https://mehrnooshm75.github.io/ismcast/" target="_blank" rel="noopener" class="link-card ad" style="animation-delay:0.4s">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3Z"/><path d="M19 11a7 7 0 0 1-14 0"/><path d="M12 18v3"/></svg>
+          <span class="label-main">
+            ایسم‌کست
+            <span class="label-sub">پادکست دیگری از همین میزبان</span>
+          </span>
         </a>
       </div>
     </div>
